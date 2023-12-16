@@ -1,13 +1,15 @@
+import { ReactNode } from "react";
 import { ButtonAction } from "./styles";
 
 interface ButtonProps {
-  children: string;
-  handleClick: () => void;
+  children: ReactNode;
+  handleClick?: () => void;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
-export const MainButton = ({ children, handleClick }: ButtonProps) => {
+export const MainButton = ({ children, handleClick, type }: ButtonProps) => {
   return(
-    <ButtonAction onClick={handleClick}>
+    <ButtonAction onClick={handleClick} type={type}>
       { children }
     </ButtonAction>
   )
