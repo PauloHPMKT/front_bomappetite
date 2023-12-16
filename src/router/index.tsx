@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import { ErrorPage, Dashboard, Login } from "../pages";
 import App from "../App";
 
@@ -10,13 +10,17 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Dashboard />,
+        element: <Navigate to="login" />,
       },
       {
-        path: "login",
-        element: <Login />,
+        path: "/app",
+        element: <Dashboard />,
       },
     ]
+  },
+  {
+    path: "login",
+    element: <Login />,
   },
 ]);
 
