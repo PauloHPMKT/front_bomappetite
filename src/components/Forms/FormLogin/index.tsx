@@ -1,19 +1,26 @@
-import { ButtonAction } from "../../Button/styles"
+import { FormEvent, useCallback } from "react";
+import { MainButton } from "../../Button";
+import { Form } from "./styles";
 
 export const FormLogin = () => {
+  const login = useCallback(async (e: FormEvent) => {
+    e.preventDefault();
+    console.log('login')
+  }, []);
+
   return(
-    <form>
+    <Form onSubmit={login}>
       <input
         type="email"
         placeholder="E-mail"
       />
       <input
         type="password"
-        placeholder="E-mail"
+        placeholder="Senha"
       />
-      <ButtonAction type="submit">
+      <MainButton type="submit">
         Entrar
-      </ButtonAction>
-    </form>
+      </MainButton>
+    </Form>
   )
 }
