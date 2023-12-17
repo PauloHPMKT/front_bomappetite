@@ -3,11 +3,20 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   background-color: red;
   color: #fff;
-  padding: 8px 24px;
+  padding: 8px 35px;
   height: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .logout-icon {
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      color: #8f0303;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -17,7 +26,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 4%;
+  padding-left: 0.5%;
 
   .header-details {
     h1 {

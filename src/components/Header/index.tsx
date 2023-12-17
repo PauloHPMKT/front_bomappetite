@@ -1,4 +1,6 @@
 import { Content, HeaderContainer } from "./styles"
+import { FiLogOut } from "react-icons/fi";
+
 import logo from '../../assets/images/food-square-logo.png';
 
 export const Header = () => {
@@ -13,6 +15,7 @@ export const Header = () => {
           <img src={logo} alt="Logo Food Square" />
         </div>
       </Content>
+      <FiLogOut size={24} className="logout-icon" />
     </HeaderContainer>
   )
 }
